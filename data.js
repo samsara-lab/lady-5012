@@ -5,23 +5,20 @@
 
 const DOGS = [
   {
-    id: "luna",
+    id: "lady",
     role: "mom",
     booked: false,
-    avatar: "https://placedog.net/400/400?id=1",
+    avatar: "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/lady_main.jpg",
     photos: [
-      "https://placedog.net/600/400?id=11",
-      "https://placedog.net/600/400?id=12",
-      "https://placedog.net/600/400?id=13",
-      "https://placedog.net/600/400?id=14",
+      "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/lady_main.jpg"
     ],
-    name:   { en: "Luna",   ru: "Луна",    sr: "Luna"   },
-    age:    { en: "~2 years", ru: "~2 года", sr: "~2 godine" },
-    weight: { en: "14 kg",  ru: "14 кг",   sr: "14 kg"  },
+    name:   { en: "Lady",   ru: "Леди",    sr: "Дама"   },
+    age:    { en: "~1.5 years", ru: "~1.5 года", sr: "~1.5 godine" },
+    weight: { en: "8 kg",  ru: "8 кг",   sr: "8 kg"  },
     description: {
-      en: "Luna is the brave, gentle soul at the heart of this story. Despite everything she went through, she never stopped caring for her puppies. She's calm, affectionate, and melts into your arms the moment you sit down. Luna loves slow walks, sunny windowsills, and being wherever you are. She gets along beautifully with children and would thrive as a loyal companion in any home that gives her the calm she's always deserved.",
-      ru: "Луна — смелая, нежная душа, стоящая в центре этой истории. Несмотря на всё, через что ей пришлось пройти, она ни на минуту не переставала заботиться о своих щенках. Она спокойна, ласкова и буквально тает у вас на руках, стоит вам присесть. Луна обожает неспешные прогулки, солнечные подоконники и просто быть рядом с вами. Она замечательно ладит с детьми и станет верным другом в любом доме, который подарит ей заслуженный покой.",
-      sr: "Luna je hrabra, nežna duša u srcu ove priče. Uprkos svemu što je prošla, nikada nije prestala da brine o svojim štencima. Mirna je, nežna i topi se u vašim rukama čim sednete. Luna voli spore šetnje, sunčane prozorske klupe i jednostavno biti tamo gde ste vi. Divno se slaže sa decom i procvetaće kao verni drug u svakom domu koji joj pruži zasluženi mir.",
+      en: "Lady is the brave, gentle soul at the heart of this story. Despite everything she went through, she never stopped caring for her puppies. She's calm, affectionate, and melts into your arms the moment you sit down. Luna loves slow walks, sunny windowsills, and being wherever you are. She gets along beautifully with children and would thrive as a loyal companion in any home that gives her the calm she's always deserved.",
+      ru: "Леди — смелая, нежная душа, стоящая в центре этой истории. Несмотря на всё, через что ей пришлось пройти, она ни на минуту не переставала заботиться о своих щенках. Она спокойна, ласкова и буквально тает у вас на руках, стоит вам присесть. Луна обожает неспешные прогулки, солнечные подоконники и просто быть рядом с вами. Она замечательно ладит с детьми и станет верным другом в любом доме, который подарит ей заслуженный покой.",
+      sr: "Dama je hrabra, nežna duša u srcu ove priče. Uprkos svemu što je prošla, nikada nije prestala da brine o svojim štencima. Mirna je, nežna i topi se u vašim rukama čim sednete. Luna voli spore šetnje, sunčane prozorske klupe i jednostavno biti tamo gde ste vi. Divno se slaže sa decom i procvetaće kao verni drug u svakom domu koji joj pruži zasluženi mir.",
     },
   },
   {
