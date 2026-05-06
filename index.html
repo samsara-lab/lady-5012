@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Found with Love 🐾</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       INTRO SCREEN
+  ══════════════════════════════════════════════════════════ -->
+  <div id="intro-screen" class="screen active">
+
+    <div class="intro-bg">
+      <div class="paw-trail">
+        <span class="paw p1">🐾</span>
+        <span class="paw p2">🐾</span>
+        <span class="paw p3">🐾</span>
+        <span class="paw p4">🐾</span>
+        <span class="paw p5">🐾</span>
+      </div>
+    </div>
+
+    <!-- Language switcher — top right -->
+    <div class="lang-bar lang-bar-intro">
+      <div class="lang-switcher" id="lang-switcher-intro"></div>
+    </div>
+
+    <div class="intro-content">
+      <div class="intro-badge" id="intro-badge"></div>
+      <h1 class="intro-title">
+        <span id="intro-title-line1"></span><br>
+        <em id="intro-title-line2"></em>
+      </h1>
+      <div class="intro-story">
+        <div class="story-block">
+          <div class="story-icon">🌧️</div>
+          <p id="story-p1"></p>
+        </div>
+        <div class="story-block">
+          <div class="story-icon">🔦</div>
+          <p id="story-p2"></p>
+        </div>
+        <div class="story-block">
+          <div class="story-icon">🏠</div>
+          <p id="story-p3"></p>
+        </div>
+        <div class="story-block">
+          <div class="story-icon">💛</div>
+          <p id="story-p4"></p>
+        </div>
+      </div>
+      <button class="cta-btn" onclick="showDogs()">
+        <span id="cta-text"></span>
+        <span class="cta-arrow">→</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       DOGS LIST SCREEN
+  ══════════════════════════════════════════════════════════ -->
+  <div id="dogs-screen" class="screen">
+    <header class="dogs-header">
+      <button class="back-btn" onclick="showIntro()">←</button>
+      <div class="header-title">
+        <span id="header-pack-title"></span>
+        <div class="header-sub" id="header-pack-sub"></div>
+      </div>
+      <div class="lang-switcher" id="lang-switcher-dogs"></div>
+    </header>
+
+    <div class="dogs-grid" id="dogs-grid">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       DOG PROFILE SCREEN
+  ══════════════════════════════════════════════════════════ -->
+  <div id="profile-screen" class="screen">
+    <div class="profile-hero" id="profile-hero">
+      <button class="back-btn profile-back" onclick="showDogs()">←</button>
+
+      <!-- Language switcher overlay on hero -->
+      <div class="lang-bar lang-bar-profile">
+        <div class="lang-switcher lang-switcher-dark" id="lang-switcher-profile"></div>
+      </div>
+
+      <div class="profile-avatar-wrap">
+        <img id="profile-avatar" src="" alt="" />
+      </div>
+      <div class="profile-hero-info">
+        <div id="profile-badge" class="profile-status-badge"></div>
+        <h2 id="profile-name"></h2>
+        <div class="profile-meta">
+          <span id="profile-age"></span>
+          <span class="meta-dot">·</span>
+          <span id="profile-weight"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-body">
+      <div class="profile-desc-section">
+        <h3 class="section-label" id="section-about"></h3>
+        <p id="profile-desc"></p>
+      </div>
+
+      <div class="profile-photos-section">
+        <h3 class="section-label" id="section-photos"></h3>
+        <div class="photos-strip" id="photos-strip"></div>
+      </div>
+
+      <div class="profile-status-section" id="profile-status-section"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+  </div>
+
+  <!-- Scripts: translations first, then data, then app logic -->
+  <script src="lang.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
