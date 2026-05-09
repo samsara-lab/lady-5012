@@ -87,6 +87,7 @@ function renderIntro() {
   document.getElementById("intro-title-line1").textContent = line1;
   document.getElementById("intro-title-line2").textContent = line2;
   document.getElementById("story-p1").textContent       = t("story1");
+  document.getElementById("story-p2").textContent       = t("story2");
   document.getElementById("cta-text").textContent       = t("ctaBtn");
 }
 

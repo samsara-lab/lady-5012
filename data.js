@@ -140,7 +140,7 @@ const DOGS = [
     photos: [
       BASE + "jira_main.jpg"
     ],
-    name:   { en: "Jira", ru: "Жира", sr: "Jira" },
+    name:   { en: "Jira", ru: "Джира", sr: "Jira" },
     age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
     weight: { en: "~470 g",  ru: "~470 г",  sr: "~470 g"  },
     description: {
