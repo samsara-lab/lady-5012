@@ -40,7 +40,7 @@ body {
 }
 
 img { display: block; max-width: 100%; }
-button { cursor: pointer; border: none; background: none; font-family: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; -webkit-appearance: none; appearance: none; }
 
 /* ─── SCREEN SYSTEM ─────────────────────────────────────────── */
 .screen {
@@ -184,6 +184,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 18px 28px;
   background: var(--bark-d);
   color: var(--cream);
+  -webkit-text-fill-color: var(--cream);
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 500;

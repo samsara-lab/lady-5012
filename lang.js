@@ -7,90 +7,102 @@ const TRANSLATIONS = {
   en: {
     // Intro screen
     introBadge:       "Found with Love",
-    introTitle:       ["A Story of", "Eight Hearts"],
-    story1: "On a rainy October evening, a local family heard faint whimpering from the old factory yard on Maple Street. Hidden behind a rusted barrel — shivering, exhausted, and thin — was a young dog, clearly just days post-partum.",
-    story2: "With flashlights in hand, they searched further and found seven tiny puppies huddled together in a makeshift nest of cardboard and dry leaves. Mama had been surviving alone, nursing her babies in the cold.",
-    story3: "The whole family — mom and all seven pups — was brought home that very night. Warm baths, proper food, and a cozy blanket turned frightened strangers into the most affectionate little pack imaginable.",
-    story4: "Now, after weeks of care, vaccinations, and a whole lot of love, they're ready to find their forever families. Each one is unique, healthy, and full of personality.",
+    introTitle:       ["A Story of", "Lady a.k.a. №5012"],
+    story1: "Lady was found in Pioneers' Park in Belgrade, alone and visibly pregnant. She was brought to safety, and just two days later gave birth to seven beautiful puppies. She carries a microchip — according to it, she was registered as a stray by Belgrade's animal service under the name 5012.",
+    story2: "",
+    story3: "",
+    story4: "",
     ctaBtn:           "Meet the family",
 
     // Dogs list screen
     packTitle:        "The Pack",
-    packSub:          "8 dogs looking for love",
+    packSub:          "8 dogs · 6 still available",
 
     // Status labels
-    statusBooked:     "Booked 🔒",
-    statusAvailable:  "Available 💛",
+    statusBooked:     (gender) => "Booked 🔒",
+    statusAvailable:  (gender) => "Available 💛",
     momLabel:         "👑 Mom",
+
+    // Gender
+    genderMale:       "Boy",
+    genderFemale:     "Girl",
 
     // Profile screen
     sectionAbout:     "About",
     sectionPhotos:    "Photos",
 
     // Profile status blocks
-    bookedTitle:      (name) => `${name} is already booked`,
-    bookedDesc:       (name) => `Someone is eagerly waiting to bring ${name} home. We hope it's the beginning of a beautiful story!`,
-    freeTitle:        (name) => `${name} is looking for a home!`,
-    freeDesc:         (name) => `If your heart is open and your home is ready, reach out to us and we'll tell you everything about the adoption process.`,
+    bookedTitle:      (name, gender) => `${name} is already booked`,
+    bookedDesc:       (name, gender) => `Someone is eagerly waiting to bring ${name} home. We hope it's the beginning of a beautiful story!`,
+    freeTitle:        (name, gender) => `${name} is looking for a home!`,
+    freeDesc:         (name, gender) => `If your heart is open and your home is ready, reach out to us and we'll tell you everything about the adoption process.`,
   },
 
   ru: {
     // Вводный экран
     introBadge:       "Найдены с любовью",
-    introTitle:       ["История", "Восьми Сердец"],
-    story1: "Дождливым октябрьским вечером местная семья услышала тихий скулёж со стороны старого заводского двора на Кленовой улице. За ржавой бочкой, дрожащая, истощённая и тощая, пряталась молодая собака — судя по всему, только-только родившая.",
-    story2: "С фонариками в руках они обыскали двор и нашли семерых крошечных щенков, прижавшихся друг к другу в гнёздышке из картона и сухих листьев. Мама выживала в одиночку, кормя малышей в холоде.",
-    story3: "Всю семью — маму и всех семерых щенков — той же ночью забрали домой. Тёплые ванны, нормальная еда и уютный плед превратили напуганных чужаков в самую нежную маленькую стаю, какую только можно представить.",
-    story4: "Теперь, после недель заботы, прививок и огромного количества любви, они готовы найти свои вечные семьи. Каждый уникален, здоров и полон характера.",
+    introTitle:       ["История", "Леди a.k.a. №5012"],
+    story1: "Леди нашли в парке Пионеров в Белграде — одну и беременную. Уже через два дня после того, как её взяли под опеку, она родила семерых прекрасных щенят. У неё есть микрочип: согласно ему, она зарегистрирована как бездомная под именем 5012 белградской муниципальной службой по животным.",
+    story2: "",
+    story3: "",
+    story4: "",
     ctaBtn:           "Познакомиться со стаей",
 
     // Список собак
     packTitle:        "Наша стая",
-    packSub:          "8 собак ищут любящий дом",
+    packSub:          "8 собак · 6 ещё свободны",
 
     // Статусы
-    statusBooked:     "Забронирован 🔒",
-    statusAvailable:  "Свободен 💛",
+    statusBooked:     (gender) => gender === "male" ? "Забронирован 🔒" : "Забронирована 🔒",
+    statusAvailable:  (gender) => gender === "male" ? "Свободен 💛" : "Свободна 💛",
     momLabel:         "👑 Мама",
+
+    // Пол
+    genderMale:       "Мальчик",
+    genderFemale:     "Девочка",
 
     // Профиль
     sectionAbout:     "О собаке",
     sectionPhotos:    "Фотографии",
 
     // Блоки статуса
-    bookedTitle:      (name) => `${name} уже забронирован`,
-    bookedDesc:       (name) => `Кто-то с нетерпением ждёт, когда сможет забрать ${name} домой. Надеемся, это начало прекрасной истории!`,
-    freeTitle:        (name) => `${name} ищет дом!`,
-    freeDesc:         (name) => `Если ваше сердце открыто и дом готов, свяжитесь с нами — мы расскажем всё об усыновлении.`,
+    bookedTitle:      (name, gender) => gender === "male" ? `${name} уже забронирован` : `${name} уже забронирована`,
+    bookedDesc:       (name, gender) => `Кто-то с нетерпением ждёт, когда сможет забрать ${name} домой. Надеемся, это начало прекрасной истории!`,
+    freeTitle:        (name, gender) => `${name} ищет дом!`,
+    freeDesc:         (name, gender) => `Если ваше сердце открыто и дом готов, свяжитесь с нами — мы расскажем всё об усыновлении.`,
   },
 
   sr: {
     // Uvodne informacije
     introBadge:       "Pronađeni s ljubavlju",
-    introTitle:       ["Priča o", "Osam Srca"],
-    story1: "Jedne kišne oktobarske večeri, lokalna porodica je čula tiho cviljenje iz starog fabričkog dvorišta u Javorovoj ulici. Iza zahrđale bačve — drhteći, iscrpljeni i mršavi — krio se mladi pas, koji je očigledno tek nedavno okotio štence.",
-    story2: "Sa lampama u rukama, pretražili su dvorište i pronašli sedam sitnih štenaca zbijenih zajedno u improvizovanom gnezdu od kartona i suvog lišća. Mama je preživljavala sama, dojeći malene na hladnoći.",
-    story3: "Cela porodica — mama i svih sedam štenaca — te iste noći je dovedena kući. Topla kupanja, prava hrana i udobno ćebe pretvorili su prestrašene strante u najnežniji mali čopor koji možete zamisliti.",
-    story4: "Sada, nakon nedelja nege, vakcinacija i bezbroj ljubavi, spremni su da pronađu svoje zauvek porodice. Svaki je jedinstven, zdrav i pun karaktera.",
+    introTitle:       ["Priča o", "Dama a.k.a. №5012"],
+    story1: "Ledi je pronađena u Pionirskom parku u Beogradu, sama i vidno trudna. Dovedena je na sigurno, a samo dva dana kasnije okotila je sedam predivnih štenaca. Ima mikročip — prema njemu, beogradska komunalna služba za zaštitu životinja registrovala ju je kao lutalicu pod imenom 5012.",
+    story2: "",
+    story3: "",
+    story4: "",
     ctaBtn:           "Upoznajte čopor",
 
     // Lista pasa
     packTitle:        "Naš čopor",
-    packSub:          "8 pasa traži ljubav",
+    packSub:          "8 pasa · 6 još slobodnih",
 
     // Statusi
-    statusBooked:     "Rezervisan 🔒",
-    statusAvailable:  "Slobodan 💛",
+    statusBooked:     (gender) => gender === "male" ? "Rezervisan 🔒" : "Rezervisana 🔒",
+    statusAvailable:  (gender) => gender === "male" ? "Slobodan 💛" : "Slobodna 💛",
     momLabel:         "👑 Mama",
+
+    // Pol
+    genderMale:       "Muško",
+    genderFemale:     "Žensko",
 
     // Profil
     sectionAbout:     "O psu",
     sectionPhotos:    "Fotografije",
 
     // Blokovi statusa
-    bookedTitle:      (name) => `${name} je već rezervisan`,
-    bookedDesc:       (name) => `Neko jedva čeka da dovede ${name} kući. Nadamo se da je ovo početak prekrasne priče!`,
-    freeTitle:        (name) => `${name} traži dom!`,
-    freeDesc:         (name) => `Ako je vaše srce otvoreno i dom spreman, javite nam se — ispričaćemo vam sve o procesu usvajanja.`,
+    bookedTitle:      (name, gender) => gender === "male" ? `${name} je već rezervisan` : `${name} je već rezervisana`,
+    bookedDesc:       (name, gender) => `Neko jedva čeka da dovede ${name} kući. Nadamo se da je ovo početak prekrasne priče!`,
+    freeTitle:        (name, gender) => `${name} traži dom!`,
+    freeDesc:         (name, gender) => `Ako je vaše srce otvoreno i dom spreman, javite nam se — ispričaćemo vam sve o procesu usvajanja.`,
   },
 };

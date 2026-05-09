@@ -11,7 +11,7 @@ if (tg) {
 const LANGS = ["en", "ru", "sr"];
 const LANG_LABELS = { en: "EN", ru: "RU", sr: "SR" };
 
-let currentLang = "en";
+let currentLang = "ru";
 let currentDog  = null;
 
 // Helper: get translated value
@@ -66,10 +66,7 @@ function showIntro() {
 function showDogs() {
   renderDogCards();
   setScreen("dogs-screen");
-  if (tg) {
-    tg.BackButton.show();
-    tg.BackButton.onClick(showIntro);
-  }
+  if (tg) tg.BackButton.show();
 }
 
 function showProfile(dogId) {
@@ -78,10 +75,7 @@ function showProfile(dogId) {
   currentDog = dog;
   renderProfile(dog);
   setScreen("profile-screen");
-  if (tg) {
-    tg.BackButton.show();
-    tg.BackButton.onClick(showDogs);
-  }
+  if (tg) tg.BackButton.show();
 }
 
 // ─── RENDER INTRO ────────────────────────────────────────────
@@ -93,7 +87,6 @@ function renderIntro() {
   document.getElementById("intro-title-line1").textContent = line1;
   document.getElementById("intro-title-line2").textContent = line2;
   document.getElementById("story-p1").textContent       = t("story1");
-  document.getElementById("story-p2").textContent       = t("story2");
   document.getElementById("cta-text").textContent       = t("ctaBtn");
 }
 
@@ -116,7 +109,7 @@ function renderDogCards() {
     card.onclick = () => showProfile(dog.id);
 
     const statusClass = dog.booked ? "status-booked" : "status-free";
-    const statusText  = dog.booked ? t("statusBooked") : t("statusAvailable");
+    const statusText  = dog.booked ? t("statusBooked")(dog.gender) : t("statusAvailable")(dog.gender);
 
     card.innerHTML = `
       <div class="card-img-wrap">
@@ -126,7 +119,7 @@ function renderDogCards() {
       </div>
       <div class="card-info">
         <div class="card-name">${d(dog, "name")}</div>
-        <div class="card-meta">${d(dog, "age")} · ${d(dog, "weight")}</div>
+        <div class="card-meta">${d(dog, "age")} · ${d(dog, "weight")} · ${t(dog.gender === "male" ? "genderMale" : "genderFemale")}</div>
       </div>
     `;
     grid.appendChild(card);
@@ -144,16 +137,17 @@ function renderProfile(dog) {
   document.getElementById("profile-name").textContent   = name;
   document.getElementById("profile-age").textContent    = d(dog, "age");
   document.getElementById("profile-weight").textContent = d(dog, "weight");
+  document.getElementById("profile-gender").textContent = t(dog.gender === "male" ? "genderMale" : "genderFemale");
   document.getElementById("profile-desc").textContent   = d(dog, "description");
   document.getElementById("section-about").textContent  = t("sectionAbout");
   document.getElementById("section-photos").textContent = t("sectionPhotos");
 
   const badge = document.getElementById("profile-badge");
   if (dog.booked) {
-    badge.textContent = t("statusBooked");
+    badge.textContent = t("statusBooked")(dog.gender);
     badge.className = "profile-status-badge booked";
   } else {
-    badge.textContent = t("statusAvailable");
+    badge.textContent = t("statusAvailable")(dog.gender);
     badge.className = "profile-status-badge available";
   }
 
@@ -183,8 +177,8 @@ function renderProfile(dog) {
       <div class="status-box booked-box">
         <div class="status-emoji">🔒</div>
         <div class="status-text">
-          <strong>${t("bookedTitle")(name)}</strong>
-          <span>${t("bookedDesc")(name)}</span>
+          <strong>${t("bookedTitle")(name, dog.gender)}</strong>
+          <span>${t("bookedDesc")(name, dog.gender)}</span>
         </div>
       </div>
     `;
@@ -193,8 +187,8 @@ function renderProfile(dog) {
       <div class="status-box free-box">
         <div class="status-emoji">💛</div>
         <div class="status-text">
-          <strong>${t("freeTitle")(name)}</strong>
-          <span>${t("freeDesc")(name)}</span>
+          <strong>${t("freeTitle")(name, dog.gender)}</strong>
+          <span>${t("freeDesc")(name, dog.gender)}</span>
         </div>
       </div>
     `;
@@ -211,4 +205,12 @@ function closeLightbox() {
 }
 
 // ─── INIT ────────────────────────────────────────────────────
+if (tg) {
+  tg.onEvent("backButtonClicked", () => {
+    const active = document.querySelector(".screen.active");
+    if (active.id === "dogs-screen")    showIntro();
+    if (active.id === "profile-screen") showDogs();
+  });
+}
+
 showIntro();

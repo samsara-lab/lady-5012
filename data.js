@@ -1,157 +1,152 @@
 // ─── DOG DATA ───────────────────────────────────────────────
 // Each dog has localised fields: { en, ru, sr }
 // avatar and photos are language-independent.
-// Replace placedog.net URLs with real photos before deploying.
+
+const BASE = "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/";
 
 const DOGS = [
   {
     id: "lady",
     role: "mom",
+    gender: "female",
     booked: false,
-    avatar: "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/lady_main.jpg",
+    avatar: BASE + "lady_main.jpg",
     photos: [
-      "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/lady_main.jpg"
+      BASE + "lady_main.jpg"
     ],
-    name:   { en: "Lady",   ru: "Леди",    sr: "Дама"   },
+    name:   { en: "Lady",   ru: "Леди",    sr: "Ledi"   },
     age:    { en: "~1.5 years", ru: "~1.5 года", sr: "~1.5 godine" },
-    weight: { en: "8 kg",  ru: "8 кг",   sr: "8 kg"  },
+    weight: { en: "8.7 kg",  ru: "8.7 кг",   sr: "8.7 kg"  },
     description: {
-      en: "Lady is the brave, gentle soul at the heart of this story. Despite everything she went through, she never stopped caring for her puppies. She's calm, affectionate, and melts into your arms the moment you sit down. Luna loves slow walks, sunny windowsills, and being wherever you are. She gets along beautifully with children and would thrive as a loyal companion in any home that gives her the calm she's always deserved.",
-      ru: "Леди — смелая, нежная душа, стоящая в центре этой истории. Несмотря на всё, через что ей пришлось пройти, она ни на минуту не переставала заботиться о своих щенках. Она спокойна, ласкова и буквально тает у вас на руках, стоит вам присесть. Луна обожает неспешные прогулки, солнечные подоконники и просто быть рядом с вами. Она замечательно ладит с детьми и станет верным другом в любом доме, который подарит ей заслуженный покой.",
-      sr: "Dama je hrabra, nežna duša u srcu ove priče. Uprkos svemu što je prošla, nikada nije prestala da brine o svojim štencima. Mirna je, nežna i topi se u vašim rukama čim sednete. Luna voli spore šetnje, sunčane prozorske klupe i jednostavno biti tamo gde ste vi. Divno se slaže sa decom i procvetaće kao verni drug u svakom domu koji joj pruži zasluženi mir.",
+      en: "Lady is the heart of this family — a white-and-ginger beauty found in Pioneers' Park in Belgrade, alone and pregnant. Just two days after she was brought to safety, she gave birth to seven puppies. She carries a microchip registered by Belgrade's animal service under the name 5012. Lady is remarkably well-mannered and calm: she gets along beautifully with people and other animals, and not once has anyone heard her bark.",
+      ru: "Леди — душа этой семьи, бело-рыжая красавица, найденная в парке Пионеров в Белграде одна и беременная. Уже через два дня после того, как её взяли под опеку, она родила семерых щенят. У неё есть микрочип, по которому белградская городская служба зарегистрировала её как бездомную под именем 5012. Леди удивительно воспитана и тиха: она отлично ладит с людьми и другими животными, и её ни разу не слышали лающей.",
+      sr: "Ledi je srce ove porodice — belo-narandžasta lepotica pronađena u Pionirskom parku u Beogradu, sama i trudna. Samo dva dana nakon što je dovedena na sigurno, okotila je sedam štenaca. Ima mikročip po kome ju je beogradska gradska služba registrovala kao lutalicu pod imenom 5012. Ledi je izuzetno vaspitana i tiha: odlično se slaže sa ljudima i drugim životinjama, i niko je nikad nije čuo da laje.",
     },
   },
   {
-    id: "biscuit",
+    id: "senior",
     role: "puppy",
+    gender: "male",
+    booked: false,
+    avatar: BASE + "senior_main.jpg",
+    photos: [
+      BASE + "senior_main.jpg"
+    ],
+    name:   { en: "Senior", ru: "Сеньор", sr: "Senior" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~520 g",  ru: "~520 г",  sr: "~520 g"  },
+    description: {
+      en: "Senior is the pack's chief problem-solver — distinguished, decisive, and always smartly dressed in his stylish little jacket markings. He came into this world knowing exactly what needed to be done, and has been doing it ever since.",
+      ru: "Сеньор — главный решала любых проблем в стае: представительный, решительный и всегда в стильном пиджачке. Он появился на свет уже зная, что в этом помёте порядок будет именно такой, какой ему нравится, — и с тех пор так и живёт.",
+      sr: "Senior je glavni rešavač svih problema u čoporu — dostojanstven, odlučan i uvek stilski obučen u svom modnom sakočiću. Došao je na svet znajući tačno šta treba da se uradi i od tada to radi bez prestanka.",
+    },
+  },
+  {
+    id: "junie",
+    role: "puppy",
+    gender: "male",
+    booked: false,
+    avatar: BASE + "junie_main.jpg",
+    photos: [
+      BASE + "junie_main.jpg"
+    ],
+    name:   { en: "Jun", ru: "Джун", sr: "Jun" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~435 g",  ru: "~435 г",  sr: "~435 g"  },
+    description: {
+      en: "Jun is a future master of domestic comfort — a dashing black-and-white pup who seems to have been born already knowing how a good home should feel.",
+      ru: "Джун — будущий профессионал в деле домашнего уюта. Бело-чёрный, статный, он, кажется, появился на свет уже зная, каким должен быть настоящий дом.",
+      sr: "Jun je budući majstor kućnog ugodaja — otmeni crno-beli štenad koji izgleda kao da se rodio znajući kako pravi dom treba da se oseća.",
+    },
+  },
+  {
+    id: "ruby",
+    role: "puppy",
+    gender: "female",
+    booked: false,
+    avatar: BASE + "ruby_main.jpg",
+    photos: [
+      BASE + "ruby_main.jpg"
+    ],
+    name:   { en: "Ruby", ru: "Руби", sr: "Ruby" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~640 g",  ru: "~640 г",  sr: "~640 g"  },
+    description: {
+      en: "Ruby is the most energetic of the litter — an active girl sporting a charming white necklace of fur, growing faster than any of her siblings.",
+      ru: "Руби — самая энергичная в помёте: активная девочка с очаровательным белым воротничком, которая растёт быстрее всех братьев и сестёр.",
+      sr: "Ruby je najenergetičnija u leglu — aktivna devojčica sa čarobnom belom ogrlicrom od krzna, koja raste brže od svih ostalih.",
+    },
+  },
+  {
+    id: "java",
+    role: "puppy",
+    gender: "female",
+    booked: false,
+    avatar: BASE + "java_main.jpg",
+    photos: [
+      BASE + "java_main.jpg"
+    ],
+    name:   { en: "Java", ru: "Джава", sr: "Java" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~524 g",  ru: "~524 г",  sr: "~524 g"  },
+    description: {
+      en: "Java has a striking cow-print coat. Sturdy, cheerful, and always in the thick of things.",
+      ru: "У Джавы эффектный «коровий» окрас. Крепкая, жизнерадостная и всегда в самой гуще событий.",
+      sr: "Java ima upečatljiv 'kravlji' uzorak dlake. Čvrsta, vesela i uvek u centru dešavanja.",
+    },
+  },
+  {
+    id: "c",
+    role: "puppy",
+    gender: "female",
+    booked: false,
+    avatar: BASE + "c_main.jpg",
+    photos: [
+      BASE + "c_main.jpg"
+    ],
+    name:   { en: "C", ru: "Си", sr: "C" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~545 g",  ru: "~545 г",  sr: "~545 g"  },
+    description: {
+      en: "C has a single perfect dot on her backside — a minimalist signature that sums her up completely. Neat, precise, and exactly as advertised.",
+      ru: "У Си есть одна идеальная точка на попе — минималистичная подпись, которая говорит о ней всё. Аккуратная, точная и именно такая, какой кажется.",
+      sr: "C ima jednu savršenu tačku na zadnjici — minimalistički potpis koji je savršeno opisuje. Uredna, precizna i tačno onakva kakva izgleda.",
+    },
+  },
+  {
+    id: "feature",
+    role: "puppy",
+    gender: "female",
     booked: true,
-    avatar: "https://placedog.net/400/400?id=2",
+    avatar: BASE + "feature_main.jpg",
     photos: [
-      "https://placedog.net/600/400?id=21",
-      "https://placedog.net/600/400?id=22",
-      "https://placedog.net/600/400?id=23",
+      BASE + "feature_main.jpg"
     ],
-    name:   { en: "Biscuit", ru: "Бисквит", sr: "Biscuit" },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.2 kg",  ru: "1,2 кг",  sr: "1,2 kg"  },
+    name:   { en: "Feature", ru: "Фича", sr: "Feature" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~293 g",  ru: "~293 г",  sr: "~293 g"  },
     description: {
-      en: "Biscuit is the bold one — the first to investigate anything new, the first to bark at the vacuum cleaner, and absolutely the first to find the warmest lap in the room. He has a golden-cream coat and the most expressive eyebrows you've ever seen on a puppy. Biscuit needs a family ready for a little adventure.",
-      ru: "Бисквит — самый смелый. Он первым изучает всё новое, первым лает на пылесос и абсолютно первым находит самые тёплые колени в комнате. У него золотисто-кремовая шёрстка и самые выразительные брови, которые вы когда-либо видели у щенка. Бисквиту нужна семья, готовая к маленьким приключениям.",
-      sr: "Biscuit je onaj smeli — prvi istražuje sve novo, prvi laje na usisivač i apsolutno prvi pronalazi najtoplija krila u sobi. Ima zlatno-kremasto krzno i najizraženije obrve koje ste ikad videli na štencetu. Biskvitu treba porodica spremna za male avanture.",
+      en: "Feature is the only ginger in the litter — a warm, amber-tinted girl who stands out immediately among her siblings. She's the most petite of them all, but what she lacks in size she more than makes up for in uniqueness.",
+      ru: "Фича — единственная рыженькая в помёте: тёплая, янтарная малышка, которую сразу замечаешь среди всех. Самая миниатюрная, но то, чего ей не хватает в размере, она с лихвой возмещает уникальностью.",
+      sr: "Feature je jedina riđa u leglu — topla, jantarno obojena devojčica koja se odmah uočava među braćom i sestrama. Ona je najsitnija od svih, ali ono što joj nedostaje u veličini nadoknađuje jedinstvenošću.",
     },
   },
   {
-    id: "dot",
+    id: "jira",
     role: "puppy",
+    gender: "female",
     booked: false,
-    avatar: "https://placedog.net/400/400?id=3",
+    avatar: BASE + "jira_main.jpg",
     photos: [
-      "https://placedog.net/600/400?id=31",
-      "https://placedog.net/600/400?id=32",
-      "https://placedog.net/600/400?id=33",
+      BASE + "jira_main.jpg"
     ],
-    name:   { en: "Dot",    ru: "Точка",  sr: "Dot"    },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.0 kg", ru: "1,0 кг", sr: "1,0 kg" },
+    name:   { en: "Jira", ru: "Жира", sr: "Jira" },
+    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    weight: { en: "~470 g",  ru: "~470 г",  sr: "~470 g"  },
     description: {
-      en: "Dot earned her name from the perfect little brown spot on her white forehead. She's thoughtful and observant — the one who watches everything before deciding to join in. Once she trusts you, though, she's an absolute velcro pup. Dot would be perfect for a quieter home where she can blossom at her own pace.",
-      ru: "Точка получила своё имя благодаря идеально круглому коричневому пятнышку на белом лбу. Она вдумчива и наблюдательна — всегда смотрит, оценивает, и лишь потом присоединяется. Но стоит ей вам довериться — и она станет вашей тенью. Точка идеально подойдёт для спокойного дома, где сможет раскрыться в своём темпе.",
-      sr: "Dot je dobila ime po savršenoj smeđoj mrljici na belom čelu. Razmišljava i posmatra — pazi na sve pre nego što odluči da se pridruži. Kad vam se poveri, postaje vaša senka. Dot bi bila savršena za tiši dom gde može da procveta svojim tempom.",
-    },
-  },
-  {
-    id: "mochi",
-    role: "puppy",
-    booked: false,
-    avatar: "https://placedog.net/400/400?id=4",
-    photos: [
-      "https://placedog.net/600/400?id=41",
-      "https://placedog.net/600/400?id=42",
-      "https://placedog.net/600/400?id=43",
-    ],
-    name:   { en: "Mochi", ru: "Мочи",  sr: "Mochi"  },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "0.9 kg", ru: "0,9 кг", sr: "0,9 kg" },
-    description: {
-      en: "Tiny, round, and impossibly soft — Mochi is the smallest of the litter and fully aware of the power this gives her. She uses her size to sneak under blankets, into jacket pockets, and straight into your heart. She purrs — yes, purrs — when she's happy. The vet confirmed she is, in fact, a dog.",
-      ru: "Крошечная, круглая и невозможно мягкая — Мочи самая маленькая в помёте и прекрасно знает, какую власть это ей даёт. Она умудряется пролезть под одеяло, в карманы куртки и прямо в ваше сердце. Она мурлычет — да, именно мурлычет — когда довольна. Ветеринар подтвердил, что она, тем не менее, собака.",
-      sr: "Sitna, okrugla i neverovatno mekana — Mochi je najmanji u leglu i savršeno svesna moći koju joj to daje. Koristi veličinu da se uvuče pod deke, u džepove jakni i pravo u vaše srce. Preде — da, prde — kada je srećna. Veterinar je potvrdio da je ipak pas.",
-    },
-  },
-  {
-    id: "thunder",
-    role: "puppy",
-    booked: true,
-    avatar: "https://placedog.net/400/400?id=5",
-    photos: [
-      "https://placedog.net/600/400?id=51",
-      "https://placedog.net/600/400?id=52",
-      "https://placedog.net/600/400?id=53",
-    ],
-    name:   { en: "Thunder", ru: "Гром",   sr: "Grom"   },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.4 kg",  ru: "1,4 кг",  sr: "1,4 kg"  },
-    description: {
-      en: "His name is bigger than he is — for now. Thunder is the largest pup in the litter, with big paws that promise he'll grow into quite the dog. He's energetic, goofy, and absolutely fearless. He once dragged a sock three times his size across the room and looked deeply proud of himself. Thunder needs an active family who will channel all that enthusiasm.",
-      ru: "Его имя пока что больше него самого. Гром — самый крупный щенок в помёте, с огромными лапами, которые обещают, что из него вырастет настоящий пёс. Он энергичен, смешон и совершенно бесстрашен. Однажды он тащил носок втрое больше себя через всю комнату и выглядел при этом невероятно гордым. Грому нужна активная семья, готовая направить весь этот энтузиазм в нужное русло.",
-      sr: "Njegovo ime je veće od njega — za sada. Grom je najveći štenac u leglu, sa velikim šapama koje obećavaju da će izrasti u pravog psa. Energičan je, smešan i potpuno neustrašiv. Jednom je vukao čarapu trostruko veću od sebe i izgledao duboko ponosan. Gromu treba aktivna porodica koja će usmeriti sav taj entuzijazam.",
-    },
-  },
-  {
-    id: "penny",
-    role: "puppy",
-    booked: false,
-    avatar: "https://placedog.net/400/400?id=6",
-    photos: [
-      "https://placedog.net/600/400?id=61",
-      "https://placedog.net/600/400?id=62",
-      "https://placedog.net/600/400?id=63",
-    ],
-    name:   { en: "Penny", ru: "Пенни",  sr: "Penny"  },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.1 kg", ru: "1,1 кг", sr: "1,1 kg" },
-    description: {
-      en: "Penny is copper-coated and copper-spirited — bright, warm, and always shining. She's the social butterfly of the litter: she greets every visitor, supervises every activity, and makes sure no one feels left out. Penny was the first pup to learn her own name. She's going to be an incredibly smart companion.",
-      ru: "Пенни — медно-рыжая снаружи и такая же огненная внутри: яркая, тёплая и всегда сияющая. Она социальная бабочка помёта: встречает каждого гостя, наблюдает за каждым занятием и следит, чтобы никто не чувствовал себя лишним. Пенни первой выучила своё имя. Из неё выйдет невероятно умная подруга.",
-      sr: "Penny je bakarnobojne dlake i bakarnobojnog duha — svetla, topla i uvek sjajna. Ona je društveni leptir legla: dočekuje svakog gosta, nadzire svaku aktivnost i brine da se niko ne oseća isključeno. Penny je bila prva koja je naučila svoje ime. Biće neverovatno pametan pratilac.",
-    },
-  },
-  {
-    id: "fig",
-    role: "puppy",
-    booked: false,
-    avatar: "https://placedog.net/400/400?id=7",
-    photos: [
-      "https://placedog.net/600/400?id=71",
-      "https://placedog.net/600/400?id=72",
-      "https://placedog.net/600/400?id=73",
-    ],
-    name:   { en: "Fig",   ru: "Финик",  sr: "Fig"    },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.0 kg", ru: "1,0 кг", sr: "1,0 kg" },
-    description: {
-      en: "Fig is a dreamer. He spends long minutes watching pigeons from the window, chasing dust motes in sunbeams, and falling asleep mid-play. He's gentle, soft-tempered, and has the most peaceful energy in the litter. Fig would thrive in a calm household — perhaps with a person who also enjoys long, quiet afternoons.",
-      ru: "Финик — мечтатель. Он подолгу наблюдает за голубями из окна, гоняется за пылинками в солнечных лучах и засыпает прямо во время игры. Он нежный, мягкий и самый спокойный в помёте. Финик будет счастлив в тихом доме — возможно, рядом с тем, кто тоже любит долгие, тихие послеполудни.",
-      sr: "Fig je sanjar. Dugo gleda golubove kroz prozor, juri čestice prašine u sunčevim zracima i zaspi usred igre. Nežan je, blagog karaktera i ima najmirniju energiju u leglu. Fig bi procvetao u mirnom domu — možda uz osobu koja takođe uživa u dugim, tihim popodnevima.",
-    },
-  },
-  {
-    id: "ziggy",
-    role: "puppy",
-    booked: true,
-    avatar: "https://placedog.net/400/400?id=8",
-    photos: [
-      "https://placedog.net/600/400?id=81",
-      "https://placedog.net/600/400?id=82",
-      "https://placedog.net/600/400?id=83",
-    ],
-    name:   { en: "Ziggy",  ru: "Зигзаг", sr: "Ziggy"  },
-    age:    { en: "8 weeks", ru: "8 недель", sr: "8 nedelja" },
-    weight: { en: "1.3 kg", ru: "1,3 кг", sr: "1,3 kg" },
-    description: {
-      en: "Ziggy never travels in a straight line — physically or emotionally. He zigs, he zags, he bounces off walls and rebounds into cuddles. He's the comedian of the bunch, always doing something unexpected. His ears don't match (one flops, one stands), and somehow that makes him even more lovable. Life with Ziggy will never be boring.",
-      ru: "Зигзаг никогда не идёт прямо — ни физически, ни эмоционально. Он петляет, скачет, отпрыгивает от стен и возвращается обниматься. Он клоун компании — всегда делает что-то неожиданное. Его уши не совпадают (одно висит, другое торчит), и это делает его только ещё более обаятельным. С Зигзагом скучно не будет никогда.",
-      sr: "Ziggy nikad ne ide pravom linijom — ni fizički ni emocionalno. Cik-cakuje, skače, odbija se od zidova i vraća se na zagrljaje. On je komičar grupe, uvek radi nešto neočekivano. Njegove uši se ne podudaraju (jedna visi, druga stoji), i to ga nekako čini još dražesnijim. Sa Ziggyjem nikad neće biti dosadno.",
+      en: "Jira is a white girl with what appears to be a black dinosaur stamped right on her backside — a truly unique marking that nobody asked for but everyone loves immediately. Bold, distinctive, and impossible to forget.",
+      ru: "Джира — белая девочка с чёрным динозавром на попе. Эту особую отметину никто не заказывал, но все сразу в неё влюбляются. Яркая, неповторимая и незабываемая.",
+      sr: "Jira je bela devojčica sa crnim dinosaurusom na zadnjici — zaista jedinstvena oznaka koju niko nije tražio, ali svi odmah obožavaju. Smela, prepoznatljiva i nemoguće je zaboraviti.",
     },
   },
 ];
