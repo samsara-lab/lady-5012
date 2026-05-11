@@ -4,15 +4,18 @@
 
 const BASE = "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/";
 
+const PUPPY_AGE = { en: "3 weeks", ru: "3 недели", sr: "3 nedelje" };
+
 const DOGS = [
   {
     id: "lady",
     role: "mom",
     gender: "female",
     booked: false,
-    avatar: BASE + "lady_main.jpg",
+    avatar: BASE + "lady_0.jpg",
     photos: [
-      BASE + "lady_main.jpg"
+      BASE + "lady_0.jpg",
+      BASE + "lady_1.jpg",
     ],
     name:   { en: "Lady",   ru: "Леди",    sr: "Ledi"   },
     age:    { en: "~1.5 years", ru: "~1.5 года", sr: "~1.5 godine" },
@@ -28,12 +31,14 @@ const DOGS = [
     role: "puppy",
     gender: "male",
     booked: false,
-    avatar: BASE + "senior_main.jpg",
+    avatar: BASE + "senior_0.jpg",
     photos: [
-      BASE + "senior_main.jpg"
+      BASE + "senior_0.jpg",
+      BASE + "senior_1.jpg",
+      BASE + "senior_2.jpg",
     ],
     name:   { en: "Senior", ru: "Сеньор", sr: "Senior" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~520 g",  ru: "~520 г",  sr: "~520 g"  },
     description: {
       en: "Senior is the pack's chief problem-solver — distinguished, decisive, and always smartly dressed in his stylish little jacket markings. He came into this world knowing exactly what needed to be done, and has been doing it ever since.",
@@ -46,12 +51,14 @@ const DOGS = [
     role: "puppy",
     gender: "male",
     booked: false,
-    avatar: BASE + "junie_main.jpg",
+    avatar: BASE + "junie_0.jpg",
     photos: [
-      BASE + "junie_main.jpg"
+      BASE + "junie_0.jpg",
+      BASE + "junie_1.jpg",
+      BASE + "junie_2.jpg",
     ],
     name:   { en: "Jun", ru: "Джун", sr: "Jun" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~435 g",  ru: "~435 г",  sr: "~435 g"  },
     description: {
       en: "Jun is a future master of domestic comfort — a dashing black-and-white pup who seems to have been born already knowing how a good home should feel.",
@@ -64,12 +71,15 @@ const DOGS = [
     role: "puppy",
     gender: "female",
     booked: false,
-    avatar: BASE + "ruby_main.jpg",
+    avatar: BASE + "ruby_0.jpg",
     photos: [
-      BASE + "ruby_main.jpg"
+      BASE + "ruby_0.jpg",
+      BASE + "ruby_1.jpg",
+      BASE + "ruby_2.jpg",
+      BASE + "ruby_3.jpg",
     ],
     name:   { en: "Ruby", ru: "Руби", sr: "Ruby" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~640 g",  ru: "~640 г",  sr: "~640 g"  },
     description: {
       en: "Ruby is the most energetic of the litter — an active girl sporting a charming white necklace of fur, growing faster than any of her siblings.",
@@ -82,12 +92,13 @@ const DOGS = [
     role: "puppy",
     gender: "female",
     booked: false,
-    avatar: BASE + "java_main.jpg",
+    avatar: BASE + "java_0.jpg",
     photos: [
-      BASE + "java_main.jpg"
+      BASE + "java_0.jpg",
+      BASE + "java_1.jpg",
     ],
     name:   { en: "Java", ru: "Джава", sr: "Java" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~524 g",  ru: "~524 г",  sr: "~524 g"  },
     description: {
       en: "Java has a striking cow-print coat. Sturdy, cheerful, and always in the thick of things.",
@@ -100,12 +111,14 @@ const DOGS = [
     role: "puppy",
     gender: "female",
     booked: false,
-    avatar: BASE + "c_main.jpg",
+    avatar: BASE + "c_0.jpg",
     photos: [
-      BASE + "c_main.jpg"
+      BASE + "c_0.jpg",
+      BASE + "c_1.JPG",
+      BASE + "c_2.JPG",
     ],
     name:   { en: "C", ru: "Си", sr: "C" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~545 g",  ru: "~545 г",  sr: "~545 g"  },
     description: {
       en: "C has a single perfect dot on her backside — a minimalist signature that sums her up completely. Neat, precise, and exactly as advertised.",
@@ -118,12 +131,13 @@ const DOGS = [
     role: "puppy",
     gender: "female",
     booked: true,
-    avatar: BASE + "feature_main.jpg",
+    avatar: BASE + "feature_0.jpg",
     photos: [
-      BASE + "feature_main.jpg"
+      BASE + "feature_0.jpg",
+      BASE + "feature_1.jpg",
     ],
     name:   { en: "Feature", ru: "Фича", sr: "Feature" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~293 g",  ru: "~293 г",  sr: "~293 g"  },
     description: {
       en: "Feature is the only ginger in the litter — a warm, amber-tinted girl who stands out immediately among her siblings. She's the most petite of them all, but what she lacks in size she more than makes up for in uniqueness.",
@@ -136,12 +150,13 @@ const DOGS = [
     role: "puppy",
     gender: "female",
     booked: false,
-    avatar: BASE + "jira_main.jpg",
+    avatar: BASE + "jira_0.jpg",
     photos: [
-      BASE + "jira_main.jpg"
+      BASE + "jira_0.jpg",
+      BASE + "jira_1.jpg",
     ],
     name:   { en: "Jira", ru: "Джира", sr: "Jira" },
-    age:    { en: "2 weeks", ru: "2 недели", sr: "2 nedelje" },
+    age:    PUPPY_AGE,
     weight: { en: "~470 g",  ru: "~470 г",  sr: "~470 g"  },
     description: {
       en: "Jira is a white girl with what appears to be a black dinosaur stamped right on her backside — a truly unique marking that nobody asked for but everyone loves immediately. Bold, distinctive, and impossible to forget.",
