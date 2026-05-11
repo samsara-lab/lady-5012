@@ -159,9 +159,9 @@ const DOGS = [
     age:    PUPPY_AGE,
     weight: { en: "~470 g",  ru: "~470 г",  sr: "~470 g"  },
     description: {
-      en: "Jira is a white girl with what appears to be a black dinosaur stamped right on her backside — a truly unique marking that nobody asked for but everyone loves immediately. Bold, distinctive, and impossible to forget.",
-      ru: "Джира — белая девочка с чёрным динозавром на попе. Эту особую отметину никто не заказывал, но все сразу в неё влюбляются. Яркая, неповторимая и незабываемая.",
-      sr: "Jira je bela devojčica sa crnim dinosaurusom na zadnjici — zaista jedinstvena oznaka koju niko nije tražio, ali svi odmah obožavaju. Smela, prepoznatljiva i nemoguće je zaboraviti.",
+      en: "Jira is a white-red girl with what appears to be a black dinosaur stamped right on her backside — a truly unique marking that nobody asked for but everyone loves immediately. Bold, distinctive, and impossible to forget.",
+      ru: "Джира — бело-рыжая девочка с чёрным динозавром на попе. Эту особую отметину никто не заказывал, но все сразу в неё влюбляются. Яркая, неповторимая и незабываемая.",
+      sr: "Jira je bela-crvenokosa devojčica sa crnim dinosaurusom na zadnjici — zaista jedinstvena oznaka koju niko nije tražio, ali svi odmah obožavaju. Smela, prepoznatljiva i nemoguće je zaboraviti.",
     },
   },
 ];
