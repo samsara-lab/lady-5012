@@ -2,24 +2,24 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:    #fdf6ec;
-  --warm:     #f5e6cc;
-  --sand:     #e8d5b0;
-  --bark:     #7c5c3a;
-  --bark-d:   #4e3620;
-  --bark-l:   #b08a60;
-  --leaf:     #5a7a50;
-  --leaf-l:   #e8f0e5;
-  --rose:     #c9715a;
-  --rose-l:   #f8ece8;
+  --cream:    #fdf5f3;
+  --warm:     #f5e4e0;
+  --sand:     #e8d0cb;
+  --bark:     #7a5568;
+  --bark-d:   #4e2f44;
+  --bark-l:   #b08898;
+  --leaf:     #5a7a64;
+  --leaf-l:   #e8f0ea;
+  --rose:     #c97888;
+  --rose-l:   #f8eaec;
   --gold:     #d4a843;
   --gold-l:   #fdf3d9;
-  --ink:      #2e2118;
-  --muted:    #9c8570;
+  --ink:      #241420;
+  --muted:    #9c7585;
   --radius:   18px;
   --radius-sm:10px;
-  --shadow:   0 4px 24px rgba(76,50,24,.10);
-  --shadow-lg:0 12px 48px rgba(76,50,24,.18);
+  --shadow:   0 4px 24px rgba(78,47,68,.09);
+  --shadow-lg:0 12px 48px rgba(78,47,68,.16);
   --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
 
@@ -191,12 +191,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: 60px;
   letter-spacing: .01em;
   transition: background .2s, transform .15s, box-shadow .2s;
-  box-shadow: 0 6px 24px rgba(78,54,32,.3);
+  box-shadow: 0 6px 24px rgba(78,47,68,.3);
   animation: fadeUp .7s .6s ease both;
 }
 .cta-btn:active {
   transform: scale(.97);
-  box-shadow: 0 2px 8px rgba(78,54,32,.2);
+  box-shadow: 0 2px 8px rgba(78,47,68,.2);
 }
 .cta-arrow {
   font-size: 20px;
@@ -256,7 +256,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .dog-card:active {
   transform: scale(.96);
-  box-shadow: 0 2px 8px rgba(76,50,24,.08);
+  box-shadow: 0 2px 8px rgba(78,47,68,.08);
 }
 
 /* Mom card spans full width */
@@ -351,10 +351,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(245,230,204,.95) 100%);
+  background: linear-gradient(to bottom, transparent 40%, rgba(245,228,224,.95) 100%);
   z-index: 1;
 }
-.mom-hero { background: linear-gradient(135deg, #f5e1c5, #ead4b0); }
+.mom-hero { background: linear-gradient(135deg, #f5e1e6, #ead4de); }
 
 .profile-back {
   position: absolute;
@@ -396,7 +396,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .profile-status-badge.booked {
   background: var(--rose-l);
-  color: #8a3820;
+  color: #8a2040;
 }
 
 .profile-hero-info h2 {
@@ -478,7 +478,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .booked-box {
   background: var(--rose-l);
-  border: 1px solid #e8c0b0;
+  border: 1px solid #e8b0c0;
 }
 
 .status-emoji { font-size: 26px; flex-shrink: 0; }
@@ -504,7 +504,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(30, 18, 8, .92);
+  background: rgba(24, 14, 22, .92);
   z-index: 1000;
   align-items: center;
   justify-content: center;
@@ -541,14 +541,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 3px;
-  border: 1px solid rgba(200,180,155,.4);
-  box-shadow: 0 2px 12px rgba(76,50,24,.1);
+  border: 1px solid rgba(195,160,175,.4);
+  box-shadow: 0 2px 12px rgba(78,47,68,.1);
 }
 
 /* Dark variant for profile hero where bg is warm/dark */
 .lang-switcher-dark {
-  background: rgba(40, 24, 10, .45);
-  border-color: rgba(255,220,170,.2);
+  background: rgba(30, 15, 28, .45);
+  border-color: rgba(255,200,220,.2);
 }
 
 .lang-btn {
@@ -571,7 +571,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--bark-d);
   color: var(--cream);
 }
-.lang-switcher-dark .lang-btn      { color: rgba(255,230,190,.6); }
+.lang-switcher-dark .lang-btn      { color: rgba(255,210,220,.6); }
 .lang-switcher-dark .lang-active   { background: rgba(255,255,255,.9); color: var(--bark-d); }
 
 /* Keep header switcher (dogs list) in-line with flex */
