@@ -16,6 +16,7 @@ const DOGS = [
     photos: [
       BASE + "lady_0.jpg",
       BASE + "lady_1.jpg",
+      BASE + "lady_2.jpg",
     ],
     name:   { en: "Lady",   ru: "Леди",    sr: "Ledi"   },
     age:    { en: "~1.5 years", ru: "~1.5 года", sr: "~1.5 godine" },
@@ -36,6 +37,7 @@ const DOGS = [
       BASE + "senior_0.jpg",
       BASE + "senior_1.jpg",
       BASE + "senior_2.jpg",
+      BASE + "senior_3.jpg",
     ],
     name:   { en: "Senior", ru: "Сеньор", sr: "Senior" },
     age:    PUPPY_AGE,
@@ -56,6 +58,7 @@ const DOGS = [
       BASE + "junie_0.jpg",
       BASE + "junie_1.jpg",
       BASE + "junie_2.jpg",
+      BASE + "junie_3.jpg",
     ],
     name:   { en: "Jun", ru: "Джун", sr: "Jun" },
     age:    PUPPY_AGE,
@@ -96,6 +99,7 @@ const DOGS = [
     photos: [
       BASE + "java_0.jpg",
       BASE + "java_1.jpg",
+      BASE + "java_2.jpg",
     ],
     name:   { en: "Java", ru: "Джава", sr: "Java" },
     age:    PUPPY_AGE,
@@ -114,8 +118,9 @@ const DOGS = [
     avatar: BASE + "c_0.jpg",
     photos: [
       BASE + "c_0.jpg",
-      BASE + "c_1.JPG",
-      BASE + "c_2.JPG",
+      BASE + "c_1.jpg",
+      BASE + "c_2.jpg",
+      BASE + "c_3.jpg",
     ],
     name:   { en: "C", ru: "Си", sr: "C" },
     age:    PUPPY_AGE,
@@ -154,6 +159,7 @@ const DOGS = [
     photos: [
       BASE + "jira_0.jpg",
       BASE + "jira_1.jpg",
+      BASE + "jira_2.jpg",
     ],
     name:   { en: "Jira", ru: "Джира", sr: "Jira" },
     age:    PUPPY_AGE,
