@@ -4,7 +4,7 @@
 
 const BASE = "https://raw.githubusercontent.com/samsara-lab/lady-5012/refs/heads/main/img/";
 
-const PUPPY_AGE = { en: "3 weeks", ru: "3 недели", sr: "3 nedelje" };
+const PUPPY_AGE = { en: "4 weeks", ru: "4 недели", sr: "4 nedelje" };
 
 const DOGS = [
   {
