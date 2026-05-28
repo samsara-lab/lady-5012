@@ -41,7 +41,7 @@ const DOGS = [
     ],
     name:   { en: "Senior", ru: "Сеньор", sr: "Senior" },
     age:    PUPPY_AGE,
-    weight: { en: "~520 g",  ru: "~520 г",  sr: "~520 g"  },
+    weight: { en: "969 g",   ru: "969 г",   sr: "969 g"   },
     description: {
       en: "Senior is the pack's chief problem-solver: distinguished, decisive, and always smartly dressed in his stylish little jacket markings. He came into this world knowing exactly what needed to be done, and has been doing it ever since.",
       ru: "Сеньор, главный решала любых проблем в стае: представительный, решительный и всегда в стильном пиджачке. Он появился на свет уже зная, что в этом помёте порядок будет именно такой, какой ему нравится, и с тех пор так и живёт.",
@@ -62,7 +62,7 @@ const DOGS = [
     ],
     name:   { en: "Jun", ru: "Джун", sr: "Jun" },
     age:    PUPPY_AGE,
-    weight: { en: "~435 g",  ru: "~435 г",  sr: "~435 g"  },
+    weight: { en: "921 g",   ru: "921 г",   sr: "921 g"   },
     description: {
       en: "Jun is a future master of domestic comfort, a dashing black-and-white pup who seems to have been born already knowing how a good home should feel.",
       ru: "Джун, будущий профессионал в деле домашнего уюта. Бело-чёрный, статный, он, кажется, появился на свет уже зная, каким должен быть настоящий дом.",
@@ -83,7 +83,7 @@ const DOGS = [
     ],
     name:   { en: "Ruby", ru: "Руби", sr: "Ruby" },
     age:    PUPPY_AGE,
-    weight: { en: "~640 g",  ru: "~640 г",  sr: "~640 g"  },
+    weight: { en: "1064 g",  ru: "1064 г",  sr: "1064 g"  },
     description: {
       en: "Ruby is the most energetic of the litter, an active girl sporting a charming white necklace of fur, growing faster than any of her siblings.",
       ru: "Руби, самая энергичная в помёте: активная девочка с очаровательным белым воротничком, которая растёт быстрее всех братьев и сестёр.",
@@ -103,7 +103,7 @@ const DOGS = [
     ],
     name:   { en: "Java", ru: "Джава", sr: "Java" },
     age:    PUPPY_AGE,
-    weight: { en: "~524 g",  ru: "~524 г",  sr: "~524 g"  },
+    weight: { en: "1041 g",  ru: "1041 г",  sr: "1041 g"  },
     description: {
       en: "Java has a striking cow-print coat. Sturdy, cheerful, and always in the thick of things.",
       ru: "У Джавы эффектный «коровий» окрас. Крепкая, жизнерадостная и всегда в самой гуще событий.",
@@ -124,7 +124,7 @@ const DOGS = [
     ],
     name:   { en: "C", ru: "Си", sr: "C" },
     age:    PUPPY_AGE,
-    weight: { en: "~545 g",  ru: "~545 г",  sr: "~545 g"  },
+    weight: { en: "1017 g",  ru: "1017 г",  sr: "1017 g"  },
     description: {
       en: "C has a single perfect dot on her backside, a minimalist signature that sums her up completely. Neat, precise, and exactly as advertised.",
       ru: "У Си есть одна идеальная точка на попе, минималистичная подпись, которая говорит о ней всё. Аккуратная, точная и именно такая, какой кажется.",
@@ -141,13 +141,13 @@ const DOGS = [
       BASE + "feature_0.jpg",
       BASE + "feature_1.jpg",
     ],
-    name:   { en: "Feature", ru: "Фича", sr: "Feature" },
+    name:   { en: "Lily", ru: "Лили", sr: "Lily" },
     age:    PUPPY_AGE,
-    weight: { en: "~293 g",  ru: "~293 г",  sr: "~293 g"  },
+    weight: { en: "657 g",   ru: "657 г",   sr: "657 g"   },
     description: {
-      en: "Feature is the only ginger in the litter, a warm, amber-tinted girl who stands out immediately among her siblings. She's the most petite of them all, but what she lacks in size she more than makes up for in uniqueness.",
-      ru: "Фича, единственная рыженькая в помёте: тёплая, янтарная малышка, которую сразу замечаешь среди всех. Самая миниатюрная, но то, чего ей не хватает в размере, она с лихвой возмещает уникальностью.",
-      sr: "Feature je jedina riđa u leglu, topla, jantarno obojena devojčica koja se odmah uočava među braćom i sestrama. Ona je najsitnija od svih, ali ono što joj nedostaje u veličini nadoknađuje jedinstvenošću.",
+      en: "Lily is the only ginger in the litter, a warm, amber-tinted girl who stands out immediately among her siblings. She's the most petite of them all, but what she lacks in size she more than makes up for in uniqueness.",
+      ru: "Лили, единственная рыженькая в помёте: тёплая, янтарная малышка, которую сразу замечаешь среди всех. Самая миниатюрная, но то, чего ей не хватает в размере, она с лихвой возмещает уникальностью.",
+      sr: "Lily je jedina riđa u leglu, topla, jantarno obojena devojčica koja se odmah uočava među braćom i sestrama. Ona je najsitnija od svih, ali ono što joj nedostaje u veličini nadoknađuje jedinstvenošću.",
     },
   },
   {
@@ -163,7 +163,7 @@ const DOGS = [
     ],
     name:   { en: "Jira", ru: "Джира", sr: "Jira" },
     age:    PUPPY_AGE,
-    weight: { en: "~470 g",  ru: "~470 г",  sr: "~470 g"  },
+    weight: { en: "864 g",   ru: "864 г",   sr: "864 g"   },
     description: {
       en: "Jira is a white-red girl with what appears to be a black dinosaur stamped right on her backside, a truly unique marking that nobody asked for but everyone loves immediately. Bold, distinctive, and impossible to forget.",
       ru: "Джира, бело-рыжая девочка с чёрным динозавром на попе. Эту особую отметину никто не заказывал, но все сразу в неё влюбляются. Яркая, неповторимая и незабываемая.",
